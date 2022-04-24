@@ -35,5 +35,26 @@ data class Ships(
             }
 
         }
+        val sortByName = object : Comparator<Ships> {
+            override fun compare(p0: Ships?, p1: Ships?): Int {
+                if (p0 != null && p1 != null)
+                    return p0.name.compareTo(p1.name)
+                return 0
+            }
+
+
+        }
+        val sortByType = object : Comparator<Ships> {
+            override fun compare(p0: Ships?, p1: Ships?): Int {
+                if (p0 != null && p1 != null)
+                    return p0.type.compareTo(p1.type)
+                return 0
+            }
+
+        }
+
+
     }
+
+
 }

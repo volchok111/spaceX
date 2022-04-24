@@ -17,7 +17,7 @@ import com.squareup.picasso.Picasso
 import java.util.*
 import kotlin.collections.ArrayList
 
-class ShipsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+open class ShipsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var shipsList = arrayListOf<Ships>()
 
@@ -36,11 +36,27 @@ class ShipsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         Log.d("Artem", "Ship arrived in adapter. ${shipsList.size} size")
     }
 
-    fun doSortByName(){
+    /**
+     *  Filter
+     */
+    fun doSortByYear(){
         Collections.sort(shipsList,Ships.sortByYear)
         notifyDataSetChanged()
     }
 
+    fun doSortByName(){
+        Collections.sort(shipsList,Ships.sortByName)
+        notifyDataSetChanged()
+    }
+
+    fun doSortByTypes(){
+        Collections.sort(shipsList,Ships.sortByType)
+        notifyDataSetChanged()
+    }
+
+    /**
+     * Filter
+     */
     class ShipViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val image = view.findViewById<ImageView>(R.id.itemIv)
         private val rocketName = view.findViewById<TextView>(R.id.rocketNameTv)
