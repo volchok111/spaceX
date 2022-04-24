@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.ships.ShipFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/black">
 
     <ImageView
         android:id="@+id/shipIv"
@@ -30,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Home port"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
         <Space
             android:layout_width="6dp"
             android:layout_height="wrap_content"/>
@@ -39,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="textEnd"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
 
     <View
@@ -47,7 +48,7 @@
         android:layout_height="1dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
-        android:background="@color/black"
+        android:background="@color/white"
         android:layout_marginTop="6dp"/>
 
     <LinearLayout
@@ -61,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Type"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
         <Space
             android:layout_width="6dp"
             android:layout_height="wrap_content"/>
@@ -70,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="textEnd"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
 
     <View
@@ -78,7 +79,7 @@
         android:layout_height="1dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
-        android:background="@color/black"
+        android:background="@color/white"
         android:layout_marginTop="6dp"/>
 
     <LinearLayout
@@ -92,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Weight"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
         <Space
             android:layout_width="6dp"
             android:layout_height="wrap_content"/>
@@ -101,7 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="textEnd"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
 
     <View
@@ -109,7 +110,7 @@
         android:layout_height="1dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
-        android:background="@color/black"
+        android:background="@color/white"
         android:layout_marginTop="6dp"/>
 
     <LinearLayout
@@ -123,7 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Year build"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
         <Space
             android:layout_width="6dp"
             android:layout_height="wrap_content"/>
@@ -132,7 +133,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="textEnd"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
 
     <View
@@ -140,7 +141,7 @@
         android:layout_height="1dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
-        android:background="@color/black"
+        android:background="@color/white"
         android:layout_marginTop="6dp"/>
 
     <LinearLayout
@@ -154,7 +155,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Abs"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
         <Space
             android:layout_width="6dp"
             android:layout_height="wrap_content"/>
@@ -163,7 +164,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="textEnd"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
 
     <View
@@ -171,7 +172,7 @@
         android:layout_height="1dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
-        android:background="@color/black"
+        android:background="@color/white"
         android:layout_marginTop="6dp"/>
 
 

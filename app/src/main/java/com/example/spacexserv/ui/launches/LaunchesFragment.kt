@@ -12,6 +12,7 @@ import com.example.spacexserv.adapter.ShipsAdapter
 import com.example.spacexserv.databinding.FragmentLaunchesBinding
 import com.example.spacexserv.model.launches.Ship
 import com.example.spacexserv.model.ships.Ships
+import com.example.spacexserv.ui.MainActivity
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 
@@ -24,15 +25,28 @@ class LaunchesFragment : MvpAppCompatFragment(), LaunchesView {
 
     @InjectPresenter
     lateinit var launchesPresenter: LaunchesPresenter
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if (activity != null){
+            (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         _binding = FragmentLaunchesBinding.inflate(layoutInflater)
         binding.recyclerView.adapter = adapter
         lifecycle.addObserver(binding.youtubePlayerView)
+
+        binding.floatActBtn.setOnClickListener {  }
+
         return binding.root
+
+
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

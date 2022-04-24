@@ -24,4 +24,16 @@ data class Ships(
     val weight_kg: Int,
     val weight_lbs: Int,
     val year_built: Int
-)
+) {
+
+    companion object {
+        val sortByYear = object : Comparator<Ships> {
+            override fun compare(p0: Ships?, p1: Ships?): Int {
+                if (p0 != null && p1 != null)
+                    return p0.year_built.compareTo(p1.year_built)
+                return 0
+            }
+
+        }
+    }
+}

@@ -43,8 +43,9 @@ class LaunchesPresenter: MvpPresenter<LaunchesView>() {
                         .subscribeOn(Schedulers.newThread())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe({ s ->
-                            viewState.addShip(s)
                             Log.d("Artem","Ship sending from presenter ${s.id}")
+                            viewState.addShip(s)
+
                         }, {
                             viewState.onUnknownError()
                         })

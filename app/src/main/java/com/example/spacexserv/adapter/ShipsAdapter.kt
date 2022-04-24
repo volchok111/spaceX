@@ -1,4 +1,4 @@
-package com.example.spacexserv.adapter
+package com .example.spacexserv.adapter
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.findNavController
@@ -13,10 +14,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.spacexserv.R
 import com.example.spacexserv.model.ships.Ships
 import com.squareup.picasso.Picasso
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ShipsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var shipsList = arrayListOf<Ships>()
+
+
 
     @SuppressLint("NotifyDataSetChanged")
     fun setList(list: ArrayList<Ships>) {
@@ -28,14 +33,19 @@ class ShipsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     fun addShip(ships: Ships) {
         shipsList.add(ships)
         notifyDataSetChanged()
-        Log.d("Artem","Ship arrived in adapter. ${shipsList.size} size")
+        Log.d("Artem", "Ship arrived in adapter. ${shipsList.size} size")
     }
 
+    fun doSortByName(){
+        Collections.sort(shipsList,Ships.sortByYear)
+        notifyDataSetChanged()
+    }
 
     class ShipViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val image = view.findViewById<ImageView>(R.id.itemIv)
         private val rocketName = view.findViewById<TextView>(R.id.rocketNameTv)
         private val description = view.findViewById<TextView>(R.id.descriptionTv)
+
 
         fun bind(ships: Ships) {
             Picasso.get().load(ships.image).into(image)
@@ -63,6 +73,10 @@ class ShipsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return shipsList.count() //size
+        return shipsList.count()
     }
-}
+
+        }
+
+
+

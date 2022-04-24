@@ -4,8 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.launches.LaunchesFragment">
-    
+    tools:context=".ui.launches.LaunchesFragment"
+    android:background="@color/black">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatActBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_add_24"/>
+
     <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -24,7 +35,7 @@
             android:layout_height="wrap_content"
             android:text="Ships"
             android:textSize="22sp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
